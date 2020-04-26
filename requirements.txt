@@ -1,0 +1,17 @@
+certifi==2020.4.5.1
+chardet==3.0.4
+configparser==4.0.2
+entrypoints==0.3
+enum34==1.1.10
+fire==0.3.1
+flake8==3.7.9
+functools32==3.2.3.post2
+idna==2.9
+mccabe==0.6.1
+pycodestyle==2.5.0
+pyflakes==2.1.1
+requests==2.23.0
+six==1.14.0
+termcolor==1.1.0
+typing==3.7.4.1
+urllib3==1.25.9
