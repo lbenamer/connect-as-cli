@@ -5,7 +5,7 @@ import json
 import requests
 from urllib3.exceptions import InsecureRequestWarning
 
-# Suppress sll warning in dev env
+# Suppress ssl warning in dev env
 requests.packages.urllib3.disable_warnings(category=InsecureRequestWarning)
 
 
@@ -311,7 +311,11 @@ class ConnectAs(object):
 
         print(u'Open url: {url}'.format(url=url))
         exec_str = 'open -na /Applications/Google\ Chrome.app  --args --new-window --incognito "{url}"'.format(url=url)
-        os.system(exec_str)
+        try:
+            os.system(exec_str)
+        except Exception as e:
+            print('Failed to open browser')
+            pass
 
     def select_user(self, **kwargs):
         try:
