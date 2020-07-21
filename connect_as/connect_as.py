@@ -242,7 +242,7 @@ class ConnectAs(object):
         return filters
 
     def search_user(self, id=None, **filters):
-        if id:
+        if id or id == 0:
             filters = self.saved_users.get(str(id))
         if not filters:
             filters = self._interactive_filters()
